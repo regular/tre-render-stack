@@ -1,0 +1,19 @@
+{
+  "name": "tre-render-stack",
+  "version": "1.0.0",
+  "description": "async renders any message",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "mutant": "^3.22.1",
+    "ssb-ref": "^2.13.9"
+  },
+  "devDependencies": {
+    "tape": "^4.9.2"
+  }
+}
