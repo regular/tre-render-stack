@@ -1,6 +1,6 @@
 {
   "name": "tre-render-stack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "renders any message",
   "main": "index.js",
   "scripts": {
