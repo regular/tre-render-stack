@@ -9,7 +9,7 @@ module.exports = function(ssb, opts) {
   const {drafts} = opts
 
   const defaultRender = opts.defaultRender || function (kv, ctx) {
-    return h('div', 'No renderer for\n' + JSON.stringify(kv, null, 2) + '\n in context\n' + JSON.stringify(ctx, null, s))
+    return h('div', 'No renderer for\n' + JSON.stringify(kv, null, 2) + '\n in context\n' + JSON.stringify(ctx, null, 2))
   }
 
   /*
