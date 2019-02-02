@@ -1,13 +1,13 @@
 {
   "name": "tre-render-stack",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "renders any message",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js"
   },
   "author": "Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)",
-  "license": "ISC",
+  "license": "AGPL-3.0-or-later",
   "keywords": [
     "tre"
   ],
@@ -25,6 +25,5 @@
   "bugs": {
     "url": "https://github.com/regular/tre-render-stack/issues"
   },
-  "homepage": "https://github.com/regular/tre-render-stack#readme",
-  "license": "AGPL-3.0-or-later"
+  "homepage": "https://github.com/regular/tre-render-stack#readme"
 }
