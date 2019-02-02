@@ -6,7 +6,7 @@ const {isMsg} = require('ssb-ref')
 module.exports = function(ssb, opts) {
   opts = opts || {}
   const renderers = []
-  const {drafts} = opts
+  const {ctxDefaults, ctxOverrides} = opts
 
   const defaultRender = opts.defaultRender || function (kv, ctx) {
     return h('div', 'No renderer for\n' + JSON.stringify(kv, null, 2) + '\n in context\n' + JSON.stringify(ctx, null, 2))
@@ -43,12 +43,13 @@ module.exports = function(ssb, opts) {
 
   function renderKV(kv, ctx, cb) { // cb is optional
     ctx = ctx || {}
-    const dict = drafts ? drafts.get(kv.key) : null;
-    const newCtx = Object.assign({
-      dict
-    }, opts, ctx, {
-      readyObs: (ctx.readyObs || cb) ? Value(true) : null
-    })
+    const newCtx = Object.assign({},
+      ctxDefaults || {},
+      ctx,
+      ctxOverrides || {}, {
+        readyObs: (ctx.readyObs || cb) ? Value(true) : null
+      }
+    )
     let el
     renderers.find( r => el = r(kv, newCtx))
     if (!el) el = defaultRender(kv, newCtx)

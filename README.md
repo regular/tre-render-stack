@@ -10,4 +10,5 @@ they are done (meaning: won't cause flicker after this point)
 RenderStack accepts a list of kvs or keys and renders all of them in parallel. An optional
 callback can be provided, ctx.readyObs semantics are also implemented, so RenderStacks can be used recursively.
 
-
+---
+License: AGBLv3 - Copyright 2019 Jan Boelsche
